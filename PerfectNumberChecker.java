@@ -25,15 +25,22 @@ public class PerfectNumberChecker {
                 }
             }
             
-            
+            // Part (ii): Calculate sum of proper divisors
             int sum = 0;
+            StringBuilder divisors = new StringBuilder("Proper divisors: ");
+            
             for (int i = 1; i < number; i++) {
                 if (number % i == 0) {
                     sum += i;
+                    divisors.append(i).append(" "); // Append divisors to a string
                 }
             }
             
+            // Display the sum and divisors
+            System.out.println(divisors.toString());
+            System.out.println("Sum of proper divisors: " + sum);
             
+            // Part (iii): Determine and display result
             if (sum == number) {
                 System.out.println(number + " is a perfect number.");
             } else {
@@ -42,4 +49,3 @@ public class PerfectNumberChecker {
         }
     }
 }
-
